@@ -1,0 +1,11 @@
+<div class="container-fluid d-flex flex-wrap justify-content-center">
+    <% @gossips.each do |gossip| %>
+        <div class="card p-2 m-1" style="width: 22rem;">
+            <div class="card-body">
+                <h2 class="card-text"><%= link_to gossip.user.first_name, "/user/#{gossip.user.id}" %></h2>
+  
+                <p class="card-text"><%= link_to gossip.title, "gossip/#{gossip.id}" %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
